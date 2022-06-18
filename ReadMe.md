@@ -1,0 +1,1 @@
+An etch-a-sketch built using basic JavaScript, HTML and CSS.
