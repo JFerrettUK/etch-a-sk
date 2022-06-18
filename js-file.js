@@ -1,17 +1,9 @@
 // Create 16x16 DIV boxes
 
- 
-var container = document.getElementById("grid");
+const container = document.getElementById("container");
 
-var box1 = document.createElement("div");
-box1.innerHTML = "TEXT";
-container.appendChild(box1);
+var div = document.createElement("div");
+div.style.width = "100px";
+div.style.height = "100px";
 
-var box2 = document.createElement("div");
-box2.innerHTML = "TEXT";
-container.appendChild(box2);
-
-var box3 = document.createElement("div");
-box3.innerHTML = "TEXT";
-container.appendChild(box3);
-
+document.getElementById("container").appendChild(div);
