@@ -1,11 +1,23 @@
 h1 {text-align: center; font-family: Helvetica, sans-serif;}
 
-.container {
-    display: flex;
+#container {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(16, 1fr);
+    max-width: 653px;
+    max-height: 653px;
   }
-  
-.container > div {
+
+
+#container > div {
     background-color: #e0e0e0;
+    width: 10px;
+    height: 10px;
     margin: 5px;
     padding: 10px;
-    font-size: 15px;  }
+    font-size: 15px;
+   }
+
+/* #container > div:hover {
+    background-color: yellow;
+  } */

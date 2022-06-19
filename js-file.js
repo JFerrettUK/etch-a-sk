@@ -2,8 +2,12 @@
 
 const container = document.getElementById("container");
 
-var div = document.createElement("div");
-div.style.width = "100px";
-div.style.height = "100px";
+for(x=0; x<256; x++) {
+    var divBox = document.createElement("div");
+    document.getElementById("container").appendChild(divBox);
+}
 
-document.getElementById("container").appendChild(div);
+container.addEventListener("click", backgroundChange);
+function backgroundChange() {
+    document.body.style.backgroundColor = 'salmon';
+}
