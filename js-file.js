@@ -2,7 +2,7 @@
 
 const container = document.getElementById("container");
 
-for(x=0; x<256; x++) {
+for (x = 0; x < 256; x++) {
     var divBox = document.createElement("div");
     divBox.className = "divBox";
     document.getElementById("container").appendChild(divBox);
@@ -10,15 +10,13 @@ for(x=0; x<256; x++) {
 
 const boxSel = document.getElementsByClassName("divBox");
 
-boxSel.onmouseover = logMouseOver;
-boxSel.onmouseout = logMouseOut;
-function logMouseOver() {
-    container.style.backgroundColor = 'yellow';
+for (var i = 0, len = boxSel.length; i < len; i++) {
+    boxSel[i].id = "box" + i;
+    boxSel[i].onmouseover = logMouseOver;
+}
+
+
+function logMouseOver(i) {
+    boxSel[i].style.backgroundColor = 'yellow';
     console.log("mouseover")
 }
-  
-function logMouseOut() {
-    container.style.backgroundColor = 'transparent';
-    console.log("mouseover")
-  }
-  
