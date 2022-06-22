@@ -1,22 +1,22 @@
 // Create 16x16 DIV boxes
 
-const container = document.getElementById("container");
+let container = document.getElementById("container");
 
 for (x = 0; x < 256; x++) {
-    var divBox = document.createElement("div");
+    let divBox = document.createElement("div");
     divBox.className = "divBox";
     document.getElementById("container").appendChild(divBox);
 }
 
 const boxSel = document.getElementsByClassName("divBox");
 
-for (var i = 0, len = boxSel.length; i < len; i++) {
+for (let i = 0, len = boxSel.length; i < len; i++) {
     boxSel[i].id = "box" + i;
-    boxSel[i].onmouseover = logMouseOver;
 }
 
-
-function logMouseOver(i) {
-    boxSel[i].style.backgroundColor = 'yellow';
-    console.log("mouseover")
-}
+for (let i = 0, len = boxSel.length; i < len; i++) {
+    let targetBox = document.getElementById("box" + i);
+    targetBox.addEventListener("mouseover", function( event ) {
+        event.target.style.backgroundColor = 'salmon';
+    });
+}  

@@ -15,8 +15,15 @@ h1 {text-align: center; font-family: Helvetica, sans-serif;}
     height: 10px;
     margin: 5px;
     padding: 10px;
-    font-size: 15px;
    }
+
+.boxCreation {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
    
 /* 
 #container > div:hover {
