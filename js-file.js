@@ -32,7 +32,7 @@ function showAlert() {
         alert("That number is too high!")
     } else if (userNum < 0) {
         alert("You can't have a negative number of boxes...") 
-    } else if (userNum > 0 && userNum < 300) {
+    } else if (userNum > 0 && userNum < 301) {
         makeGrid(userNum);
     } else {
         alert("Please retry using the number keys!")
