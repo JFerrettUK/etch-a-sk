@@ -20,6 +20,8 @@ function makeGrid(userNum) {
     }  
 }
 
+makeGrid(256)
+
 function showAlert() {
     const boxes = document.querySelectorAll('.divBox');
 
