@@ -20,22 +20,25 @@ function makeGrid(userNum) {
     }  
 }
 
-makeGrid(256)
+makeGrid(10000)
 
 function showAlert() {
-    const boxes = document.querySelectorAll('.divBox');
+    let boxes = document.querySelectorAll('.divBox');
 
     boxes.forEach(box => {
         box.remove();
     });
     
-    let userNum = prompt("How many boxes in your Etch-a-Sketch? Choose between 1 and 300.");
-    if (userNum > 300) {
+    makeGrid(10000)
+
+    let userNum = prompt("How many squares per side in your Etch-a-Sketch? Choose between 1 and 100.");
+    if (userNum > 100) {
         alert("That number is too high!")
     } else if (userNum < 0) {
-        alert("You can't have a negative number of boxes...") 
-    } else if (userNum > 0 && userNum < 301) {
-        makeGrid(userNum);
+        alert("You can't have a negative number of squares.") 
+    } else if (userNum > 0 && userNum < 101) {
+        document.getElementById("container").style.gridTemplateColumns = `repeat(${userNum},1fr)`;
+        document.getElementById("container").style.gridTemplateRows = `repeat(${userNum},1fr)`;
     } else {
         alert("Please retry using the number keys!")
     }
